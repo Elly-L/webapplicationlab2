@@ -1,4 +1,4 @@
-<html> 
+    <html> 
     <head> 
     <link rel="stylesheet" href="coverflow.css" /> 
 
@@ -36,20 +36,22 @@
     </div> 
     
     <div> 
-    <img src= "images/elteklogo.jpg">
+    <img src= "elteklogo.jpg">
     <p></p><br><br><p><br> 
 
   
-<div class="scroll-container">
+<div class="scroll-container" style="display: flex;">
     <!-- Insert the img elements that you want to display in the banner -->
-    <img src="images/1.jpg" data-aos="fade-down" alt="Car 3">
-    <img src= "images/2.jpg" data-aos="zoom-in" alt="Car 4">
-    <img src= "images/3.jpg" data-aos="flip-left" alt="Car 5">
-  </div>
-  
+    <img src="1.jpg" data-aos="fade-right" alt="Car 3">
+    <img src= "2.jpg" data-aos="fade-zoom-in" alt="Car 4">
+    <img src= "3.jpg" data-aos="fade-out" alt="Car 5">
+    <img src="4.jpg" data-aos="fade-right" alt="Car 3">
+    <img src= "5.jpg" data-aos="fade-zoom-in" alt="Car 4">
+    <img src= "6.jpg" data-aos="fade-out" alt="Car 5">
+</div>
 
     <hr style="width: 1000px;"> 
-    <a href= "autobazzar.html">Home</a> | <a href= "aboutus.html">About me</a> | <a href= "finddealer.html">  </a> | <hr style="width: 1000px;"> 
+    <a href= "autobazzar.html">Home</a> | <a href= "aboutus.html">About me</a> | <hr style="width: 1000px;"> 
     <h1> Elly's Flashbacks</h1> 
     <p> 
     <UL class="navbar"> 
@@ -60,21 +62,23 @@
     <table border ="5"> 
     <tr>
     <!-- Delete the empty td element -->
-    <td><img src="images/5.jpg" data-aos="fade-right"></td>
-    <td><img src="images/2.jpg" data-aos="fade-left"></td>
+    <td><img src="5.jpg" data-aos="fade-right"></td>
+    <td><img src="2.jpg" data-aos="fade-left"></td>
 
-    <td><img src= "images/6.jpg" data-aos="fade-right"></td></tr> 
+    <td><img src= "6.jpg" data-aos="fade-right"></td></tr> 
 
     <tr>
     <!-- Use colspan to span across two columns -->
     
-    <td><img src="images/4.jpg" data-aos="fade-down"></td>
+    <td><img src="4.jpg" data-aos="fade-down"></td>
+        <td><img src="1.jpg" data-aos="fade-left"></td>
+        <td><img src="6.jpg" data-aos="fade-zoom-in"></td>
     </tr> 
     <tr>
     <!-- Use rowspan to span across two rows -->
-    <td><img src= "images/5.jpg" data-aos="zoom-in"></td>
-    <td><img src= "images/6.jpg" data-aos="zoom-out"></td>
-    <td rowspan="2"><img src="images/3.jpg" data-aos="flip-left"></td></tr> 
+    <td><img src= "5.jpg" data-aos="zoom-in"></td>
+    <td><img src= "6.jpg" data-aos="zoom-out"></td>
+    <td rowspan="2"><img src="3.jpg" data-aos="flip-left"></td></tr> 
 
     <tr>
 
@@ -93,4 +97,3 @@
       AOS.init();
     </script>
 </html>
-
