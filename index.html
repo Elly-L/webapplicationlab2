@@ -1,112 +1,79 @@
-    <html> 
-    <head> 
-    <link rel="stylesheet" href="coverflow.css" /> 
-
-    <link rel="stylesheet" href="style.css" /> 
-
-    <script src="jquery.min.js"></script> 
-
-    <script src="sly.min.js"></script> 
-    <script src="coverflow.js"></script>
-
-    <meta name="viewport" content="width=device-width" /> 
-
-    <!-- Link the AOS library -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2/dist/aos.css">
-    
-    </head> 
-    
-    
-    <body> 
-    <div class="wrap" id="coverflow1"> 
-    
-    <div class="scrollbar"> 
-    <div class="handle"> 
-    <div class="mousearea"></div> 
-    </div> 
-    </div> 
-    
-    <div class="frame coverflow"> 
-    <ul class="clearfix"> 
-    <li>Holder</li> 
-    </ul> 
-    </div> 
-    <ul class="pages"></ul> 
-    
-    </div> 
-    
-    <div> 
-    <img src= "elteklogo.jpg">
-    <p></p><br><br><p><br> 
-
-  
-<div class="scroll-container" id="scroll-container" style="display: flex;">
-    <!-- Insert the img elements that you want to display in the banner -->
-    <img class="current-slide" src="1.jpg" data-aos="fade-right" alt="Car 3">
-    <img src="2.jpg" data-aos="fade-zoom-in" alt="Car 4">
-    <img src="3.jpg" data-aos="fade-out" alt="Car 5">
-</div>
-
-<script>
-    var slideIndex = 0;
-    showSlides();
-
-    function showSlides() {
-        var slides = document.querySelectorAll("#scroll-container img");
-        for (var i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {slideIndex = 1}
-        slides[slideIndex-1].style.display = "block";
-        setTimeout(showSlides, 2000); // Change image every 2 seconds
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mashallah Mashkhas</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: linear-gradient(to right, #f00, #f80080, #000);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
     }
-</script>
 
-    <hr style="width: 1000px;"> 
-    <a href= "autobazzar.html">Home</a> | <a href= "aboutus.html">About me</a> | <hr style="width: 1000px;"> 
-    <h1> Elly's Flashbacks</h1> 
-    <p> 
-    <UL class="navbar"> 
-    <li><a href="home.html">Home</a></li> 
-    <li><a href="aboutus.html">About me</a></li> 
-    <li><a href="finddealer.html">contact</a></li> 
-    </UL> 
-    <table border ="5"> 
-    <tr>
-    <!-- Delete the empty td element -->
-    <td><img src="5.jpg" data-aos="fade-right"></td>
-    <td><img src="2.jpg" data-aos="fade-left"></td>
+    .container {
+      width: 80%;
+      max-width: 500px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
 
-    <td><img src= "6.jpg" data-aos="fade-right"></td></tr> 
+    .quotes h1 {
+      font-size: 3em; /* Title font size remains the same */
+      margin-bottom: 20px;
+      color: #000; /* Black */
+    }
 
-    <tr>
-    <!-- Use colspan to span across two columns -->
-    
-    <td><img src="4.jpg" data-aos="fade-down"></td>
-        <td><img src="1.jpg" data-aos="fade-left"></td>
-        <td><img src="6.jpg" data-aos="fade-zoom-in"></td>
-    </tr> 
-    <tr>
-    <!-- Use rowspan to span across two rows -->
-    <td><img src= "5.jpg" data-aos="zoom-in"></td>
-    <td><img src= "6.jpg" data-aos="zoom-out"></td>
-    <td rowspan="2"><img src="3.jpg" data-aos="flip-left"></td></tr> 
+    .quotes p {
+      /* Increase font size of quotes to 3 times the original size */
+      font-size: 2.5em; /* 1.2em * 3 */
+      margin-bottom: 30px;
+    }
 
-    <tr>
+    button {
+      background-color: #f80080;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      float: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="quotes">
+      <h1>Mashallah Mashkhas</h1>
+      <p id="quote">Your beauty shines brighter than any jewel, Mashkhas.</p>
+      <button onclick="changeQuote()">Press Me</button>
+    </div>
+  </div>
+  <script>
+    const quotes = [
+      "Your beauty shines brighter than any jewel, Mashkhas.",
+      "Your eyes hold the depth of a thousand starry nights, Mashkhas.",
+      "A single smile from you could light up the entire world, Mashkhas.",
+      "You are the embodiment of grace and elegance, Mashkhas.",
+      "My heart beats only for you, Mashkhas.",
+      "You are a vision of perfection, Mashkhas.",
+      "You are more beautiful than words can express, Mashkhas."
+    ];
 
-    </tr> 
-    </table> 
-    <p> 
+    let currentQuote = 0;
 
-    </p>
-    </div> 
-    </body>
-
-    <!-- Initialize the AOS library -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2/dist/aos.js">
-    </script>
-    <script>
-      AOS.init();
-    </script>
+    function changeQuote() {
+      document.getElementById("quote").innerHTML = quotes[currentQuote];
+      currentQuote = (currentQuote + 1) % quotes.length;
+    }
+  </script>
+</body>
 </html>
